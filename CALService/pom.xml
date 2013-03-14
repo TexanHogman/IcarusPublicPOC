@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.paypal.infra.nextgen.services.api</groupId>
+	<artifactId>CALService</artifactId>
+	<name>CALService</name>
+	<packaging>jar</packaging>
+	<version>1.0.X-SNAPSHOT</version>
+	<description></description>
+	<url>${siteUrl}/${project.artifactId}/${project.version}</url>
+
+	<developers>
+		<developer>
+			<id>rhogge</id>
+			<name>Rick Hogge</name>
+			<email>rhogge@paypal.com</email>
+		</developer>
+	</developers>
+
+	<dependencies>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${compileSource}</source>
+					<target>${compileSource}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${surefireVersion}</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<excludes>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-module-skeleton</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${jboss-module.destdir}/${module.path}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${jboss-module.srcdir}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>module.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-integration</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${jboss-module.destdir}/${module.path}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.build.directory}</directory>
+									<filtering>false</filtering>
+									<includes>
+										<include>${project.build.finalName}.jar</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jboss.jandex</groupId>
+				<artifactId>jandex-maven-plugin</artifactId>
+				<version>1.0.1</version>
+				<executions>
+					<execution>
+						<id>make-index</id>
+						<goals>
+							<goal>jandex</goal>
+						</goals>
+						<!-- phase is 'process-classes by default' -->
+						<configuration>
+							<!-- Nothing needed here for simple cases -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<properties>
+		<!--  generalized and therefore should not need to be touched -->
+		<compileSource>1.7</compileSource>
+		<coberturaVersion>2.4</coberturaVersion>
+		<surefireVersion>2.7</surefireVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jboss-module.srcdir>${project.basedir}/src/main/resources</jboss-module.srcdir>
+		<jboss-module.destdir>D:/jboss/jboss-as-7.2.0.Final/modules</jboss-module.destdir>
+		<module.path>com/paypal/infra/nextgen/services/api/${project.artifactId}/${project.version}</module.path>
+	</properties>
+
+</project>

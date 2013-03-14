@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.paypal.infra.nextgen.util</groupId>
+	<artifactId>StartHere</artifactId>
+	<packaging>pom</packaging>
+	<name>StartHere</name>
+	<version>1.0.X-SNAPSHOT</version>
+	<url>${siteUrl}/${project.artifactId}/${project.version}</url>
+
+	<developers>
+		<developer>
+			<id>rhogge</id>
+			<name>Rick Hogge</name>
+			<email>rhogge@paypal.com</email>
+		</developer>
+	</developers>
+	<modules>
+		<!-- APIS -->
+		<module>../CALService</module>
+		<module>../MayflyService</module>
+
+		<!-- IMPLS -->
+		<module>../CALServiceMock</module>
+		<module>../MayflyServiceMock</module>
+
+		<!-- FEATURES -->
+		<module>../SecurityFeature</module>
+		<module>../ECVFeature</module>
+		<module>../WebPresentationFeature</module>
+
+		<!-- PLATFORM PACKAGING OF DEP -->
+		<module>../IcarusPlatform</module>
+
+		<!-- SAMPLE APP -->
+		<module>../SwordfishApp</module>
+	</modules>
+
+
+</project>

@@ -1,0 +1,1 @@
+A example implementation of the CALService that logs events to the console.

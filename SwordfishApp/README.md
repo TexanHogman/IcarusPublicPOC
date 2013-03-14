@@ -1,0 +1,1 @@
+A sample JEE6 web application that demonstrates the features of the POC

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module xmlns="urn:jboss:module:1.2" name="${project.groupId}.${project.artifactId}" slot="${project.version}" >
+    <dependencies>
+        <module name="com.paypal.infra.nextgen.services.impl.CALServiceMock" slot="${project.version}"/> 
+    	<module name="com.paypal.infra.nextgen.services.impl.MayflyServiceMock" slot="${project.version}" />
+    	<module name="com.paypal.infra.nextgen.features.SecurityFeature" slot="${project.version}" />
+    	<module name="com.paypal.infra.nextgen.features.ECVFeature" slot="${project.version}" />
+    	<module name="com.paypal.infra.nextgen.features.WebPresentationFeature" slot="${project.version}" />
+ 	</dependencies>
+</module>
+
+ 
