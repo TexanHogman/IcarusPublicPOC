@@ -29,14 +29,14 @@
 			<artifactId>WebPresentationFeature</artifactId>
 			<version>1.0.X-SNAPSHOT</version>
 			<type>jar</type>
-			<scope>compile</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.paypal.infra.nextgen.services.impl</groupId>
-			<artifactId>CALServiceMock</artifactId>
+			<groupId>com.paypal.infra.nextgen.services.api</groupId>
+			<artifactId>CALService</artifactId>
 			<version>1.0.X-SNAPSHOT</version>
 			<type>jar</type>
-			<scope>compile</scope>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -90,6 +90,7 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<archive>
 						<manifestEntries>
+							<dependencies>com.paypal.infra.nextgen.features.WebPresentationFeature:1.0.X-SNAPSHOT meta-inf services export annotations, com.paypal.infra.nextgen.services.api.CALService:1.0.X-SNAPSHOT meta-inf services export annotations,com.paypal.infra.nextgen.services.impl.CALServiceMock:1.0.X-SNAPSHOT meta-inf services export annotations</dependencies>
 						</manifestEntries>
 					</archive>
 				</configuration>
