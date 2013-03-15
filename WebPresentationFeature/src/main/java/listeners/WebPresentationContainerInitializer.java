@@ -11,6 +11,6 @@ public class WebPresentationContainerInitializer implements ServletContainerInit
 
 	public void onStartup(Set<Class<?>> arg0, ServletContext arg1) throws ServletException
 	{
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- WebPresentationContainerInitializer (do spring init here) ---");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- WebPresentationContainerInitializer ---");
 	}
 }

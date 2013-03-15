@@ -9,7 +9,7 @@
     	<module name="javax.jws.api" />
     	<module name="javax.annotation.api" />
     	<module name="com.paypal.infra.nextgen.services.impl.CALServiceMock" slot="${project.version}" />
-    	<module name="com.paypal.infra.nextgen.services.impl.MayflyServiceMock" slot="${project.version}" />
+    	<module name="com.paypal.infra.nextgen.services.api.CALService" slot="${project.version}" />
  	</dependencies>
 </module>
 

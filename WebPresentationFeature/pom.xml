@@ -25,15 +25,8 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.paypal.infra.nextgen.services.api</groupId>
-			<artifactId>MayflyService</artifactId>
-			<version>1.0.X-SNAPSHOT</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.paypal.infra.nextgen.services.api</groupId>
-			<artifactId>CALService</artifactId>
+			<groupId>com.paypal.infra.nextgen.services.impl</groupId>
+			<artifactId>CalServiceMock</artifactId>
 			<version>1.0.X-SNAPSHOT</version>
 			<type>jar</type>
 			<scope>compile</scope>

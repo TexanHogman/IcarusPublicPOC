@@ -25,11 +25,18 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.paypal.infra.nextgen</groupId>
-			<artifactId>IcarusPlatform</artifactId>
+			<groupId>com.paypal.infra.nextgen.features</groupId>
+			<artifactId>WebPresentationFeature</artifactId>
 			<version>1.0.X-SNAPSHOT</version>
-			<type>pom</type>
-			<scope>provided</scope>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.paypal.infra.nextgen.services.impl</groupId>
+			<artifactId>CALServiceMock</artifactId>
+			<version>1.0.X-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
@@ -83,7 +90,6 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<archive>
 						<manifestEntries>
-							<dependencies>com.paypal.infra.nextgen.IcarusPlatform:1.0.X-SNAPSHOT meta-inf services export annotations,com.paypal.infra.nextgen.services.api.MayflyService:1.0.X-SNAPSHOT meta-inf services export annotations,com.paypal.infra.nextgen.services.impl.MayflyServiceMock:1.0.X-SNAPSHOT meta-inf services export annotations</dependencies>
 						</manifestEntries>
 					</archive>
 				</configuration>

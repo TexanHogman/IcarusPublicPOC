@@ -1,1 +1,0 @@
-A pom project that simple bundles all the dependencies into a single one for an application to compile against.

@@ -18,19 +18,12 @@
 	<modules>
 		<!-- APIS -->
 		<module>../CALService</module>
-		<module>../MayflyService</module>
 
 		<!-- IMPLS -->
 		<module>../CALServiceMock</module>
-		<module>../MayflyServiceMock</module>
 
 		<!-- FEATURES -->
-		<module>../SecurityFeature</module>
-		<module>../ECVFeature</module>
 		<module>../WebPresentationFeature</module>
-
-		<!-- PLATFORM PACKAGING OF DEP -->
-		<module>../IcarusPlatform</module>
 
 		<!-- SAMPLE APP -->
 		<module>../SwordfishApp</module>

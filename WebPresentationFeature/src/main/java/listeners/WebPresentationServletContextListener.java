@@ -19,7 +19,7 @@ public class WebPresentationServletContextListener implements ServletContextList
 	@Override
 	public void contextInitialized(ServletContextEvent arg0)
 	{
-		System.out.println(										"<==== WebPresentationServletContextListener starting =====>");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<==== WebPresentationServletContextListener starting =====>");
 		// TODO Auto-generated method stub
 		
 	}
